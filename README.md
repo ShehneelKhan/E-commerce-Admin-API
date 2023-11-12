@@ -17,10 +17,10 @@
    **pip install -r requirements.txt**
    
 6. Edit the database.py, enter your username, password and database name:<br>
-   **URL_DATABASE = 'mysql+pymysql://<username>:<password>@localhost:3306/<database_name>'**
+   **URL_DATABASE = 'mysql+pymysql://<user_name>:<your_password>@localhost:3306/<database_name>'**
 
 7. Similarly, edit the insert_demo_data.py, enter your username, password and database name:<br>
-   **URL_DATABASE = 'mysql+pymysql://<username>:<password>@localhost:3306/<database_name>'**
+   **URL_DATABASE = 'mysql+pymysql://<user_name>:<your_password>@localhost:3306/<database_name>'**
 
 8. Run FastAPI:<br>
    **uvicorn main:app --reload<br>**
