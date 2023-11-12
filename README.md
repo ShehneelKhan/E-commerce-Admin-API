@@ -46,12 +46,12 @@ Now, you can run the server again using **uvicorn main:app --reload** and start 
   - `product_id` (int)
   - `quantity_sold` (int)
   - `total_amount` (float)
-  - `sale_date` (date)
+  - `sale_date` (date) (Format: "YYYY-MM-DD")
 - **Response Body:**
   - `product_id` (int)
   - `quantity_sold` (int)
   - `total_amount` (float)
-  - `sale_date` (date)
+  - `sale_date` (date) (Format: "YYYY-MM-DD")
 
 ---
 
@@ -59,8 +59,8 @@ Now, you can run the server again using **uvicorn main:app --reload** and start 
 - **Endpoint:** `/sales/revenue`
 - **Method:** GET
 - **Query Parameters:**
-  - `start_date` (str)
-  - `end_date` (str)
+  - `start_date` (str) (Format: "YYYY-MM-DD")
+  - `end_date` (str)   (Format: "YYYY-MM-DD")
 - **Response Body:**
   - `revenue` (float)
 
@@ -140,8 +140,8 @@ Now, you can run the server again using **uvicorn main:app --reload** and start 
 - **Endpoint:** `/sales/filter`
 - **Method:** GET
 - **Query Parameters:**
-  - `start_date` (optional)
-  - `end_date` (optional)
+  - `start_date` (optional) (Format: "YYYY-MM-DD")
+  - `end_date` (optional)   (Format: "YYYY-MM-DD")
   - `product_id` (optional)
   - `category` (optional)
   - `quantity_sold_min` (optional)
@@ -167,10 +167,10 @@ Now, you can run the server again using **uvicorn main:app --reload** and start 
 - **Endpoint:** `/sales/compare`
 - **Method:** GET
 - **Query Parameters:**
-  - `start_date_1` (str)
-  - `end_date_1` (str)
-  - `start_date_2` (str)
-  - `end_date_2` (str)
+  - `start_date_1` (str) (Format: "YYYY-MM-DD")
+  - `end_date_1` (str)   (Format: "YYYY-MM-DD")
+  - `start_date_2` (str) (Format: "YYYY-MM-DD")
+  - `end_date_2` (str)   (Format: "YYYY-MM-DD")
 - **Response Body:**
   - `revenue_comparison` (dict) with details for both date ranges
 
@@ -180,8 +180,8 @@ Now, you can run the server again using **uvicorn main:app --reload** and start 
 - **Endpoint:** `/sales/bydate`
 - **Method:** GET
 - **Query Parameters:**
-  - `start_date` (str)
-  - `end_date` (str)
+  - `start_date` (str) (Format: "YYYY-MM-DD")
+  - `end_date` (str)   (Format: "YYYY-MM-DD")
 - **Response Body:** List of sale records within the specified date range
 
 ---
